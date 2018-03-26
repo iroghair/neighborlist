@@ -2,6 +2,8 @@
 #include <fstream>
 #include <vector>
 #include <limits>
+#include "NeighborList.h"
+#include "mpi.h"
 
 using namespace std;
 
@@ -10,9 +12,14 @@ int main(int argc, char* argv[])
     int npart;
     double** pos;
 
+    // Initialise MPI
+    int world_size, world_rank;
+    MPI_Init(&argc, &argv);
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
     cout.precision(numeric_limits<double>::max_digits10);
     cout << "Trying to open file " << argv[1] << " ..." << endl;
-
     ifstream file(argv[1], ios::binary);
 
     if (file.is_open())
@@ -37,14 +44,25 @@ int main(int argc, char* argv[])
             for (unsigned int i = 0; i < npart; i++)
                 cout << "Found position: " << pos[i][0] << ", " << pos[i][1] << ", " << pos[i][2] << endl;
 
+        // getchar();
 
-        cout << "Waiting for key press...." << endl << endl;
-        getchar();
+        // Create neighborlist
+        double dsize[3] = {1.0, 1.0, 1.0};
+        int ncell[3] = {50,50,50};
+        NeighborList nblist(npart, pos, dsize, ncell, 0, npart);
 
+        nblist.createCellList();
+        // nblist.printCellList();
+        nblist.createPartnerList();
+        nblist.printPartnerList();
+        
+        // Cleanup
         for (int i = 0; i < npart; i++)
             delete [] pos[i];
         
-        delete [] pos;
+        delete pos;
     }
     else cout << "Error opening file " << argv[1] << ".\n\n" << endl;
+
+    cout << "Exiting normally..." << endl;
 }

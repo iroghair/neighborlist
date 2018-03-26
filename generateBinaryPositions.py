@@ -3,7 +3,7 @@
 import numpy as np
 from array import array
 
-npart = np.intc(3)
+npart = np.intc(1000)
 fname = 'example.bin'
 
 print ("Generating {} particle positions...".format(npart))
