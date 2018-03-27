@@ -1,2 +1,2 @@
 all:
-	mpic++ -o neighborlist -O3 main.cpp NeighborList.cpp -std=c++14
+	g++ -o neighborlist -O3 -fopenmp -std=c++14 main.cpp NeighborList.cpp

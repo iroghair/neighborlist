@@ -1,0 +1,1005 @@
+desc: (none)
+cmd: ./neighborlist example.bin
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1733237679
+mem_heap_B=416300120
+mem_heap_extra_B=16115440
+mem_stacks_B=0
+heap_tree=detailed
+n5: 416300120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 360189952 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 355233792 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 342110208 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 342110208 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 342110208 0x59FB41B: clone (clone.S:109)
+   n1: 13123584 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 13123584 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n1: 4956160 0x401CB8: NeighborList::createCellList() [clone ._omp_fn.0] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n0: 4956160 in 2 places, all below massif's threshold (1.00%)
+ n0: 24000008 0x401813: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+ n0: 24000000 0x4014D6: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+ n0: 8000000 0x4014BA: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+ n0: 110160 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=4088367889
+mem_heap_B=992447576
+mem_heap_extra_B=16276976
+mem_stacks_B=0
+heap_tree=detailed
+n4: 992447576 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 936337408 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 931381248 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 876191744 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 876191744 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 876191744 0x59FB41B: clone (clone.S:109)
+   n1: 55189504 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 55189504 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 24000008 0x401813: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+ n0: 24000000 0x4014D6: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+ n0: 8110160 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=5621725190
+mem_heap_B=1367252060
+mem_heap_extra_B=16382508
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=7205885141
+mem_heap_B=1755379292
+mem_heap_extra_B=16491604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=9766439691
+mem_heap_B=2381954136
+mem_heap_extra_B=16667352
+mem_stacks_B=0
+heap_tree=detailed
+n4: 2381954136 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2325843968 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 2320887808 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 2158551040 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 2158551040 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 2158551040 0x59FB41B: clone (clone.S:109)
+   n1: 162336768 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 162336768 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 24000008 0x401813: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+ n0: 24000000 0x4014D6: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+ n0: 8110160 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=12162936857
+mem_heap_B=2969005144
+mem_heap_extra_B=16832384
+mem_stacks_B=0
+heap_tree=detailed
+n2: 2969005144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2912894976 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 2907938816 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 2663985152 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 2663985152 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 2663985152 0x59FB41B: clone (clone.S:109)
+   n1: 243953664 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 243953664 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=14256165824
+mem_heap_B=3481961564
+mem_heap_extra_B=16976028
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=16238626100
+mem_heap_B=3967821928
+mem_heap_extra_B=17111568
+mem_stacks_B=0
+heap_tree=detailed
+n2: 3967821928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3911711760 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 3906755600 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 3631361024 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 3631361024 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 3631361024 0x59FB41B: clone (clone.S:109)
+   n1: 275394576 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 275394576 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=19045716555
+mem_heap_B=4655539416
+mem_heap_extra_B=17304832
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4655539416 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 4599429248 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 4594473088 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 4314294400 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 4314294400 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 4314294400 0x59FB41B: clone (clone.S:109)
+   n1: 280178688 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 280178688 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=20627485637
+mem_heap_B=5042716248
+mem_heap_extra_B=17413528
+mem_stacks_B=0
+heap_tree=detailed
+n2: 5042716248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 4986606080 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 4981649920 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 4631851520 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 4631851520 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 4631851520 0x59FB41B: clone (clone.S:109)
+   n1: 349798400 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 349798400 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=22323044801
+mem_heap_B=5457547052
+mem_heap_extra_B=17530572
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=24193048362
+mem_heap_B=5915905624
+mem_heap_extra_B=17658912
+mem_stacks_B=0
+heap_tree=detailed
+n2: 5915905624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 5859795456 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 5854839296 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 5394436608 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 5394436608 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 5394436608 0x59FB41B: clone (clone.S:109)
+   n1: 460402688 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 460402688 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=26200308376
+mem_heap_B=6407479384
+mem_heap_extra_B=17797272
+mem_stacks_B=0
+heap_tree=detailed
+n2: 6407479384 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6351369216 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 6346413056 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 5858526208 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 5858526208 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 5858526208 0x59FB41B: clone (clone.S:109)
+   n1: 487886848 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 487886848 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=28371372410
+mem_heap_B=6939766872
+mem_heap_extra_B=17946104
+mem_stacks_B=0
+heap_tree=detailed
+n2: 6939766872 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6883656704 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 6878700544 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 6348690432 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 6348690432 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 6348690432 0x59FB41B: clone (clone.S:109)
+   n1: 530010112 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 530010112 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=30725957421
+mem_heap_B=7516169336
+mem_heap_extra_B=18107904
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7516169336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 7460059168 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 7455103008 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 6885214240 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 6885214240 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 6885214240 0x59FB41B: clone (clone.S:109)
+   n1: 569888768 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 569888768 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=31965193421
+mem_heap_B=7819424344
+mem_heap_extra_B=18193352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=34285183387
+mem_heap_B=8387538008
+mem_heap_extra_B=18353112
+mem_stacks_B=0
+heap_tree=detailed
+n2: 8387538008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 8331427840 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 8326471680 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 7666757632 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 7666757632 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 7666757632 0x59FB41B: clone (clone.S:109)
+   n1: 659714048 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 659714048 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=37126056589
+mem_heap_B=9083876696
+mem_heap_extra_B=18548632
+mem_stacks_B=0
+heap_tree=detailed
+n2: 9083876696 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 9027766528 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 9022810368 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 8260534528 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 8260534528 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 8260534528 0x59FB41B: clone (clone.S:109)
+   n1: 762275840 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 762275840 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=40203966353
+mem_heap_B=9837947992
+mem_heap_extra_B=18761000
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=41820454553
+mem_heap_B=10233928816
+mem_heap_extra_B=18871968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=43503618661
+mem_heap_B=10646574172
+mem_heap_extra_B=18987676
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=45254472644
+mem_heap_B=11075059288
+mem_heap_extra_B=19108152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=47147222368
+mem_heap_B=11538697304
+mem_heap_extra_B=19238160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 11538697304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 11482587136 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 11477630976 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 10420068352 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 10420068352 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 10420068352 0x59FB41B: clone (clone.S:109)
+   n1: 1057562624 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1057562624 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=49064837150
+mem_heap_B=12007894104
+mem_heap_extra_B=19369832
+mem_stacks_B=0
+heap_tree=detailed
+n2: 12007894104 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 11951783936 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 11946827776 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 10876264448 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 10876264448 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 10876264448 0x59FB41B: clone (clone.S:109)
+   n1: 1070563328 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1070563328 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=51061650296
+mem_heap_B=12496153688
+mem_heap_extra_B=19507120
+mem_stacks_B=0
+heap_tree=detailed
+n2: 12496153688 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 12440043520 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 12435087360 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 11356209152 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 11356209152 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 11356209152 0x59FB41B: clone (clone.S:109)
+   n1: 1078878208 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1078878208 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=53135434140
+mem_heap_B=13004239960
+mem_heap_extra_B=19649776
+mem_stacks_B=0
+heap_tree=detailed
+n2: 13004239960 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 12948129792 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 12943173632 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 11817543680 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 11817543680 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 11817543680 0x59FB41B: clone (clone.S:109)
+   n1: 1125629952 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1125629952 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=55272472999
+mem_heap_B=13527233628
+mem_heap_extra_B=19796644
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=57498300451
+mem_heap_B=14071632988
+mem_heap_extra_B=19949412
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=59816226810
+mem_heap_B=14638759000
+mem_heap_extra_B=20108600
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=62226298121
+mem_heap_B=15228694104
+mem_heap_extra_B=20274584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=63572438271
+mem_heap_B=15558325336
+mem_heap_extra_B=20367120
+mem_stacks_B=0
+heap_tree=detailed
+n2: 15558325336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 15502215168 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 15497259008 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 14068144128 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 14068144128 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 14068144128 0x59FB41B: clone (clone.S:109)
+   n1: 1429114880 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1429114880 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=66154740934
+mem_heap_B=16190770264
+mem_heap_extra_B=20544336
+mem_stacks_B=0
+heap_tree=detailed
+n2: 16190770264 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 16134660096 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 16129703936 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 14666182656 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 14666182656 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 14666182656 0x59FB41B: clone (clone.S:109)
+   n1: 1463521280 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1463521280 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=68843251125
+mem_heap_B=16848851032
+mem_heap_extra_B=20728656
+mem_stacks_B=0
+heap_tree=detailed
+n2: 16848851032 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 16792740864 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 16787784704 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 15278914560 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 15278914560 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 15278914560 0x59FB41B: clone (clone.S:109)
+   n1: 1508870144 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1508870144 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=71641131835
+mem_heap_B=17533673560
+mem_heap_extra_B=20920384
+mem_stacks_B=0
+heap_tree=detailed
+n2: 17533673560 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 17477563392 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 17472607232 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 15915516928 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 15915516928 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 15915516928 0x59FB41B: clone (clone.S:109)
+   n1: 1557090304 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1557090304 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=74550692243
+mem_heap_B=18246298712
+mem_heap_extra_B=21120008
+mem_stacks_B=0
+heap_tree=detailed
+n2: 18246298712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 18190188544 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 18185232384 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 16590553088 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 16590553088 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 16590553088 0x59FB41B: clone (clone.S:109)
+   n1: 1594679296 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1594679296 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=77576718175
+mem_heap_B=18987891800
+mem_heap_extra_B=21328752
+mem_stacks_B=0
+heap_tree=detailed
+n2: 18987891800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 18931781632 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 18926825472 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 17302183936 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 17302183936 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 17302183936 0x59FB41B: clone (clone.S:109)
+   n1: 1624641536 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1624641536 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=79138021035
+mem_heap_B=19369899096
+mem_heap_extra_B=21436104
+mem_stacks_B=0
+heap_tree=detailed
+n2: 19369899096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 19313788928 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 19308832768 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 17670895616 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 17670895616 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 17670895616 0x59FB41B: clone (clone.S:109)
+   n1: 1637937152 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1637937152 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=80730041986
+mem_heap_B=19759602776
+mem_heap_extra_B=21545696
+mem_stacks_B=0
+heap_tree=detailed
+n2: 19759602776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 19703492608 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 19698536448 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 18057019392 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 18057019392 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 18057019392 0x59FB41B: clone (clone.S:109)
+   n1: 1641517056 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1641517056 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=82352188461
+mem_heap_B=20157123672
+mem_heap_extra_B=21657320
+mem_stacks_B=0
+heap_tree=detailed
+n2: 20157123672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 20101013504 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 20096057344 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 18430926848 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 18430926848 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 18430926848 0x59FB41B: clone (clone.S:109)
+   n1: 1665130496 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1665130496 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=84009885210
+mem_heap_B=20562607216
+mem_heap_extra_B=21771504
+mem_stacks_B=0
+heap_tree=detailed
+n2: 20562607216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 20506497048 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 20501540888 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 18823352344 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 18823352344 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 18823352344 0x59FB41B: clone (clone.S:109)
+   n1: 1678188544 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1678188544 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=85701642541
+mem_heap_B=20976270424
+mem_heap_extra_B=21888200
+mem_stacks_B=0
+heap_tree=detailed
+n2: 20976270424 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 20920160256 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 20915204096 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 19213406208 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 19213406208 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 19213406208 0x59FB41B: clone (clone.S:109)
+   n1: 1701797888 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1701797888 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=87428502784
+mem_heap_B=21398240600
+mem_heap_extra_B=22006856
+mem_stacks_B=0
+heap_tree=detailed
+n2: 21398240600 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 21342130432 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 21337174272 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 19538788608 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 19538788608 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 19538788608 0x59FB41B: clone (clone.S:109)
+   n1: 1798385664 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1798385664 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=89186138415
+mem_heap_B=21828693096
+mem_heap_extra_B=22127616
+mem_stacks_B=0
+heap_tree=detailed
+n2: 21828693096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 21772582928 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 21767626768 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 19953725456 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 19953725456 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 19953725456 0x59FB41B: clone (clone.S:109)
+   n1: 1813901312 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1813901312 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=90976375413
+mem_heap_B=22267784280
+mem_heap_extra_B=22250968
+mem_stacks_B=0
+heap_tree=detailed
+n2: 22267784280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 22211674112 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 22206717952 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 20373807104 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 20373807104 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 20373807104 0x59FB41B: clone (clone.S:109)
+   n1: 1832910848 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1832910848 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=92802823472
+mem_heap_B=22715710552
+mem_heap_extra_B=22376656
+mem_stacks_B=0
+heap_tree=detailed
+n2: 22715710552 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 22659600384 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 22654644224 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 20776697856 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 20776697856 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 20776697856 0x59FB41B: clone (clone.S:109)
+   n1: 1877946368 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1877946368 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=94670676884
+mem_heap_B=23172635736
+mem_heap_extra_B=22505040
+mem_stacks_B=0
+heap_tree=detailed
+n2: 23172635736 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 23116525568 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 23111569408 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 21199265792 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 21199265792 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 21199265792 0x59FB41B: clone (clone.S:109)
+   n1: 1912303616 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1912303616 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=96572529708
+mem_heap_B=23638765656
+mem_heap_extra_B=22635824
+mem_stacks_B=0
+heap_tree=detailed
+n2: 23638765656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 23582655488 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 23577699328 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 21621249024 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 21621249024 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 21621249024 0x59FB41B: clone (clone.S:109)
+   n1: 1956450304 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 1956450304 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=98514321966
+mem_heap_B=24114246744
+mem_heap_extra_B=22769200
+mem_stacks_B=0
+heap_tree=detailed
+n2: 24114246744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 24058136576 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 24053180416 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 22000375808 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 22000375808 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 22000375808 0x59FB41B: clone (clone.S:109)
+   n1: 2052804608 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2052804608 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=101500967592
+mem_heap_B=24845433944
+mem_heap_extra_B=22974832
+mem_stacks_B=0
+heap_tree=detailed
+n2: 24845433944 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 24789323776 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 24784367616 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 22681010176 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 22681010176 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 22681010176 0x59FB41B: clone (clone.S:109)
+   n1: 2103357440 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2103357440 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=102516902733
+mem_heap_B=25094048856
+mem_heap_extra_B=23044360
+mem_stacks_B=0
+heap_tree=detailed
+n2: 25094048856 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 25037938688 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 25032982528 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 22929625088 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 22929625088 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 22929625088 0x59FB41B: clone (clone.S:109)
+   n1: 2103357440 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2103357440 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=103543471420
+mem_heap_B=25345150552
+mem_heap_extra_B=23114624
+mem_stacks_B=0
+heap_tree=detailed
+n2: 25345150552 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 25289040384 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 25284084224 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 23174787584 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 23174787584 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 23174787584 0x59FB41B: clone (clone.S:109)
+   n1: 2109296640 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2109296640 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=104578924910
+mem_heap_B=25598762072
+mem_heap_extra_B=23185928
+mem_stacks_B=0
+heap_tree=detailed
+n2: 25598762072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 25542651904 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 25537695744 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 23386443776 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 23386443776 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 23386443776 0x59FB41B: clone (clone.S:109)
+   n1: 2151251968 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2151251968 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=105623969713
+mem_heap_B=25854913624
+mem_heap_extra_B=23257840
+mem_stacks_B=0
+heap_tree=detailed
+n2: 25854913624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 25798803456 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 25793847296 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 23628853248 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 23628853248 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 23628853248 0x59FB41B: clone (clone.S:109)
+   n1: 2164994048 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2164994048 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=106679829253
+mem_heap_B=26113643632
+mem_heap_extra_B=23330008
+mem_stacks_B=0
+heap_tree=detailed
+n2: 26113643632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 26057533464 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 26052577304 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 23861041176 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 23861041176 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 23861041176 0x59FB41B: clone (clone.S:109)
+   n1: 2191536128 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2191536128 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=107745960524
+mem_heap_B=26374956120
+mem_heap_extra_B=23403384
+mem_stacks_B=0
+heap_tree=detailed
+n2: 26374956120 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 26318845952 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 26313889792 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 24067016704 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 24067016704 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 24067016704 0x59FB41B: clone (clone.S:109)
+   n1: 2246873088 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2246873088 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=108824704733
+mem_heap_B=26638883928
+mem_heap_extra_B=23477168
+mem_stacks_B=0
+heap_tree=detailed
+n2: 26638883928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 26582773760 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 26577817600 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 24220573696 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 24220573696 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 24220573696 0x59FB41B: clone (clone.S:109)
+   n1: 2357243904 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2357243904 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=109914001036
+mem_heap_B=26905443416
+mem_heap_extra_B=23552296
+mem_stacks_B=0
+heap_tree=detailed
+n2: 26905443416 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 26849333248 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 26844377088 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 24475234304 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 24475234304 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 24475234304 0x59FB41B: clone (clone.S:109)
+   n1: 2369142784 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2369142784 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=111010736459
+mem_heap_B=27174665304
+mem_heap_extra_B=23627552
+mem_stacks_B=0
+heap_tree=detailed
+n2: 27174665304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 27118555136 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 27113598976 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 24734478336 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 24734478336 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 24734478336 0x59FB41B: clone (clone.S:109)
+   n1: 2379120640 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2379120640 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=112122902830
+mem_heap_B=27446578264
+mem_heap_extra_B=23704064
+mem_stacks_B=0
+heap_tree=detailed
+n2: 27446578264 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 27390468096 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 27385511936 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 25006391296 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25006391296 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 25006391296 0x59FB41B: clone (clone.S:109)
+   n1: 2379120640 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2379120640 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=113243971731
+mem_heap_B=27721219160
+mem_heap_extra_B=23780920
+mem_stacks_B=0
+heap_tree=detailed
+n2: 27721219160 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 27665108992 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 27660152832 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 25281032192 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25281032192 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 25281032192 0x59FB41B: clone (clone.S:109)
+   n1: 2379120640 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2379120640 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=114377394928
+mem_heap_B=27998608472
+mem_heap_extra_B=23858520
+mem_stacks_B=0
+heap_tree=detailed
+n2: 27998608472 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 27942498304 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 27937542144 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 25558421504 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25558421504 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 25558421504 0x59FB41B: clone (clone.S:109)
+   n1: 2379120640 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2379120640 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=115529210254
+mem_heap_B=28278758488
+mem_heap_extra_B=23937272
+mem_stacks_B=0
+heap_tree=peak
+n2: 28278758488 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 28222648320 0x4022BC: void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n2: 28217692160 0x401FAB: NeighborList::createPartnerList() [clone ._omp_fn.1] (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+   n1: 25838571520 0x54CB43C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25838571520 0x5EC96B8: start_thread (pthread_create.c:333)
+     n0: 25838571520 0x59FB41B: clone (clone.S:109)
+   n1: 2379120640 0x54C7CBD: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 2379120640 0x40188D: main (in /home/ivo/Development/Git/neighborlistTesting/neighborlist)
+  n0: 4956160 in 1 place, below massif's threshold (1.00%)
+ n0: 56110168 in 14 places, all below massif's threshold (1.00%)

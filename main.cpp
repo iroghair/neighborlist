@@ -2,8 +2,11 @@
 #include <fstream>
 #include <vector>
 #include <limits>
+#include <chrono>
 #include "NeighborList.h"
-#include "mpi.h"
+// #include "mpi.h"
+
+typedef std::chrono::high_resolution_clock Clock;
 
 using namespace std;
 
@@ -12,11 +15,11 @@ int main(int argc, char* argv[])
     int npart;
     double** pos;
 
-    // Initialise MPI
-    int world_size, world_rank;
-    MPI_Init(&argc, &argv);
-    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
-    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+    // // Initialise MPI
+    // int world_size, world_rank;
+    // MPI_Init(&argc, &argv);
+    // MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    // MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
 
     cout.precision(numeric_limits<double>::max_digits10);
     cout << "Trying to open file " << argv[1] << " ..." << endl;
@@ -48,18 +51,19 @@ int main(int argc, char* argv[])
 
         // Create neighborlist
         double dsize[3] = {1.0, 1.0, 1.0};
-        int ncell[3] = {50,50,50};
+        int ncell[3] = {100,100,100};
         NeighborList nblist(npart, pos, dsize, ncell, 0, npart);
 
+        auto t1 = Clock::now();
         nblist.createCellList();
-        // nblist.printCellList();
         nblist.createPartnerList();
-        nblist.printPartnerList();
+        auto t2 = Clock::now();
+        std::cout << "Delta t2-t1: " 
+              << std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count()
+              << " ms" << std::endl;
         
         // Cleanup
-        for (int i = 0; i < npart; i++)
-            delete [] pos[i];
-        
+        for (int i = 0; i < npart; i++) delete [] pos[i];
         delete pos;
     }
     else cout << "Error opening file " << argv[1] << ".\n\n" << endl;

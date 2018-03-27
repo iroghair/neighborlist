@@ -68,8 +68,10 @@ public:
 
         void createCellList() {
             int cell[3];
+            #pragma omp parallel for private(cell)
             for (unsigned int i = pmin; i < pmax; i++) {
                 getCurrentCell(i,cell);
+                #pragma omp critical
                 cell_list[cell[0]][cell[1]][cell[2]].push_back(i); 
             }
         }
@@ -110,6 +112,7 @@ public:
             unsigned int cx, cy, cz, i;
             vector<int>::const_iterator it;
 
+            #pragma omp parallel for private(lo,hi,cx,cy,cz,it)
             for ( i = pmin; i < pmax; i++) {
                 getNeighborCells(i,lo,hi);
 

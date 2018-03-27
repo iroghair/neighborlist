@@ -35,7 +35,10 @@
                 "/usr/include/x86_64-linux-gnu",
                 "/usr/include",
                 "${workspaceRoot}",
-                "/usr/lib/x86_64-linux-gnu/openmpi/include"
+                "/usr/lib/x86_64-linux-gnu/openmpi/include",
+                "/usr/include/c++/5",
+                "/usr/include/x86_64-linux-gnu/c++/5",
+                "/usr/lib/llvm-3.8/lib/clang/3.8.0/include"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
