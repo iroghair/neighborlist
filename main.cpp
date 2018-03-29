@@ -3,6 +3,7 @@
 #include <vector>
 #include <limits>
 #include <chrono>
+#include <Eigen/Dense>
 #include "NeighborList.h"
 // #include "mpi.h"
 
