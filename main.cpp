@@ -3,17 +3,21 @@
 #include <vector>
 #include <limits>
 #include <chrono>
+#include <Eigen/Dense>
 #include "NeighborList.h"
 // #include "mpi.h"
 
 typedef std::chrono::high_resolution_clock Clock;
 
+using namespace Eigen;
 using namespace std;
 
 int main(int argc, char* argv[])
 {
     int npart;
     double** pos;
+    double *tmp_pos;
+    MatrixX3d ppos;
 
     // // Initialise MPI
     // int world_size, world_rank;
@@ -31,28 +35,25 @@ int main(int argc, char* argv[])
         file.read((char*) &npart, sizeof(int));
         cout << "Trying to read " << npart << " positions from file..." << endl;
         
-        // Allocate memory
-        pos = new double*[npart];
-        for (int i = 0; i < npart; i++)
-           pos[i] = new double[3];
-        
+        // Allocate memory for temporary array
+        tmp_pos = new double[npart*3];
+
         // Read all particle positions into array
-        for (int i = 0; i < npart; i++) {
-            file.read((char*) pos[i], sizeof(double[3]));
-        }
+        file.read((char*) tmp_pos, npart*sizeof(double[3]));
+        ppos = Map<MatrixX3d>(tmp_pos, npart, 3);
+
+        delete [] tmp_pos;
+
         file.close();
 
         // Print array when only few particles are used
         if (npart < 100)
-            for (unsigned int i = 0; i < npart; i++)
-                cout << "Found position: " << pos[i][0] << ", " << pos[i][1] << ", " << pos[i][2] << endl;
-
-        // getchar();
+            cout << "Found positions: " << endl << ppos << endl;
 
         // Create neighborlist
         double dsize[3] = {1.0, 1.0, 1.0};
         int ncell[3] = {100,100,100};
-        NeighborList nblist(npart, pos, dsize, ncell, 0, npart);
+        NeighborList nblist(npart, ppos, dsize, ncell, 0, npart);
 
         auto t1 = Clock::now();
         nblist.createCellList();
@@ -61,10 +62,6 @@ int main(int argc, char* argv[])
         std::cout << "Delta t2-t1: " 
               << std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count()
               << " ms" << std::endl;
-        
-        // Cleanup
-        for (int i = 0; i < npart; i++) delete [] pos[i];
-        delete pos;
     }
     else cout << "Error opening file " << argv[1] << ".\n\n" << endl;
 

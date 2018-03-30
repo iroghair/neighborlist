@@ -2,42 +2,38 @@
 #include <math.h>
 #include <cmath>
 #include <vector>
-#include <boost/array.hpp>
+#include <Eigen/Dense>
 
+using namespace Eigen;
 using namespace std;
 
 // Class to represent points.
 class NeighborList {
 private:
-        int np,pmin,pmax;
-        double **pos;
-        int NX, NY, NZ;
-        double XMAX, YMAX, ZMAX, DX, DY, DZ;
+        int np, pmin, pmax;
+        MatrixX3d pos;
         vector<int> ***cell_list;
         vector<int> *partner_list;
+
+        Array3d domainSize, dCells;
+        Array3i nCells;
 public:
         // Constructor
-        NeighborList(int npart, double **pp, double* domain_size, int* number_of_cells, int min_p, int max_p) {
-            NX = number_of_cells[0];
-            NY = number_of_cells[1];
-            NZ = number_of_cells[2];
-            XMAX = domain_size[0];
-            YMAX = domain_size[1];
-            ZMAX = domain_size[2];
-            DX = XMAX/NX;
-            DY = YMAX/NY;
-            DZ = ZMAX/NZ;
+        NeighborList(const int npart, const MatrixX3d& pp, double* domain_size, int* number_of_cells, const int min_p, const int max_p) {
+            nCells = Map<Array3i>(number_of_cells);
+            domainSize = Map<Array3d>(domain_size); 
+            dCells = domainSize / nCells.cast<double> ();
             np = npart;
             pos = pp;
             pmin = min_p;
             pmax = max_p;
 
             // Initialize the cell_list
-            cell_list = new vector<int>**[NX];
-            for (uint i = 0; i < NX; i++) {
-                cell_list[i] = new vector<int>*[NY];
-                for (uint j = 0; j < NY; j++) {
-                    cell_list[i][j] = new vector<int>[NZ];
+            cell_list = new vector<int>**[nCells.coeff(0)];
+            for (uint i = 0; i < nCells.coeff(0); i++) {
+                cell_list[i] = new vector<int>*[nCells.coeff(1)];
+                for (uint j = 0; j < nCells.coeff(1); j++) {
+                    cell_list[i][j] = new vector<int>[nCells.coeff(2)];
                 }
             }
             partner_list = new vector<int>[np];
@@ -49,8 +45,8 @@ public:
             clearPartnerList();
             clearCellList();
 
-            for (uint i = 0; i < NX; ++i) {
-                for (uint j = 0; j < NY; ++j)
+            for (uint i = 0; i < nCells.coeff(0); ++i) {
+                for (uint j = 0; j < nCells.coeff(1); ++j)
                     delete [] cell_list[i][j];
 
                 delete [] cell_list[i];
@@ -61,25 +57,25 @@ public:
             cout << "Done clearing..." << endl;
         }
 
-        int Numpart() { return np; }
+        int getNumberOfParticles() { return np; }
 
         // Setters
-        void setParticles(int npart, double **pp) { np = npart; pos = pp; }
+        // void setParticles(int npart, double **pp) { np = npart; pos = pp; }
 
         void createCellList() {
-            int cell[3];
+            Array3i cell;
             #pragma omp parallel for private(cell)
             for (unsigned int i = pmin; i < pmax; i++) {
                 getCurrentCell(i,cell);
                 #pragma omp critical
-                cell_list[cell[0]][cell[1]][cell[2]].push_back(i); 
+                cell_list[cell.coeff(0)][cell.coeff(1)][cell.coeff(2)].push_back(i); 
             }
         }
 
         void clearCellList() {
-            for (uint i = 0; i < NX; ++i)
-                for (uint j = 0; j < NY; ++j)
-                    for ( uint k = 0; k < NZ; k++)
+            for (uint i = 0; i < nCells.coeff(0); ++i)
+                for (uint j = 0; j < nCells.coeff(1); ++j)
+                    for ( uint k = 0; k < nCells.coeff(2); k++)
                         cell_list[i][j][k].clear();
         }
 
@@ -90,9 +86,9 @@ public:
 
         void printCellList() {
             vector<int> myVec;
-             for (uint i = 0; i < NX; ++i) {
-                for (uint j = 0; j < NY; ++j) {
-                     for (uint k = 0; k < NZ; ++k) {
+             for (uint i = 0; i < nCells.coeff(0); ++i) {
+                for (uint j = 0; j < nCells.coeff(1); ++j) {
+                     for (uint k = 0; k < nCells.coeff(2); ++k) {
                         myVec = cell_list[i][j][k];
                         if (myVec.size() > 0) {
                             cout << "Cell [" << i << "][" << j << "][" << k << "] = {";
@@ -108,7 +104,7 @@ public:
         }
 
         void createPartnerList() {
-            unsigned int lo[3], hi[3];
+            Array3i lo, hi;
             unsigned int cx, cy, cz, i;
             vector<int>::const_iterator it;
 
@@ -117,13 +113,13 @@ public:
                 getNeighborCells(i,lo,hi);
 
                 // Loop over all nearest neighboring cells
-                for ( cx = lo[0]; cx <= hi[0]; cx++) {
-                    for ( cy = lo[1]; cy <= hi[1]; cy++) {
-                        for ( cz = lo[2]; cz <= hi[2]; cz++) {
+                for ( cx = lo.coeff(0); cx <= hi.coeff(0); cx++) {
+                    for ( cy = lo.coeff(1); cy <= hi.coeff(1); cy++) {
+                        for ( cz = lo.coeff(2); cz <= hi.coeff(2); cz++) {
                             for (   it = cell_list[cx][cy][cz].begin(); 
                                     it != cell_list[cx][cy][cz].end(); 
                                     ++it) {
-                                partner_list[i].push_back(*it);
+                                    partner_list[i].push_back(*it);
                             }
                         }
                     }
@@ -141,21 +137,16 @@ public:
             }
         }
 
-        void getNeighborCells(unsigned int idx, unsigned int lo[3], unsigned int hi[3])
+        void getNeighborCells(const unsigned int idx, Array3i& lo, Array3i& hi)
         {
-            // for (uint i = 0; i < 3; i++)
-            lo[0] = (unsigned int) max(0, (int) floor((pos[idx][0])/DX-0.5));
-            lo[1] = (unsigned int) max(0, (int) floor((pos[idx][1])/DY-0.5));
-            lo[2] = (unsigned int) max(0, (int) floor((pos[idx][2])/DZ-0.5));
-            hi[0] = (unsigned int) min(NX-1, (int) floor((pos[idx][0])/DX+0.5));
-            hi[1] = (unsigned int) min(NY-1, (int) floor((pos[idx][1])/DY+0.5));
-            hi[2] = (unsigned int) min(NZ-1, (int) floor((pos[idx][2])/DZ+0.5));
+            static const Array3i myZero = Array3i::Zero(3);
+            static const Array3i nCells_sub_1 = nCells - Array3i::Ones(3);
+
+            lo = myZero.max( floor(Array3d(pos.row(idx))/dCells - 0.5).cast <int> ());
+            hi = nCells_sub_1.min( floor( Array3d(pos.row(idx))/dCells + 0.5).cast <int> () );
         }
 
-        void getCurrentCell(int idx, int cell[3]) {
-            cell[0] = (int) floor((pos[idx][0]) / DX);
-            cell[1] = (int) floor((pos[idx][1]) / DY);
-            cell[2] = (int) floor((pos[idx][2]) / DZ);
+        void getCurrentCell(const unsigned int idx, Array3i& cell) {
+            cell = floor(Array3d(pos.row(idx))/dCells.array()).cast <int> ();
         }
-
 };

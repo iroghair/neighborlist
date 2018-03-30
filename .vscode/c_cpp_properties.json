@@ -38,7 +38,8 @@
                 "/usr/lib/x86_64-linux-gnu/openmpi/include",
                 "/usr/include/c++/5",
                 "/usr/include/x86_64-linux-gnu/c++/5",
-                "/usr/lib/llvm-3.8/lib/clang/3.8.0/include"
+                "/usr/lib/llvm-3.8/lib/clang/3.8.0/include",
+                "/usr/include/eigen3"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
@@ -56,7 +57,10 @@
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            }
+            },
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         },
         {
             "name": "Win32",
