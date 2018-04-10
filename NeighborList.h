@@ -29,11 +29,11 @@ public:
             pmax = max_p;
 
             // Initialize the cell_list
-            cell_list = new vector<int>**[nCells.coeff(0)];
-            for (uint i = 0; i < nCells.coeff(0); i++) {
-                cell_list[i] = new vector<int>*[nCells.coeff(1)];
-                for (uint j = 0; j < nCells.coeff(1); j++) {
-                    cell_list[i][j] = new vector<int>[nCells.coeff(2)];
+            cell_list = new vector<int>**[nCells[0]];
+            for (uint i = 0; i < nCells[0]; i++) {
+                cell_list[i] = new vector<int>*[nCells[1]];
+                for (uint j = 0; j < nCells[1]; j++) {
+                    cell_list[i][j] = new vector<int>[nCells[2]];
                 }
             }
             partner_list = new vector<int>[np];
@@ -45,8 +45,8 @@ public:
             clearPartnerList();
             clearCellList();
 
-            for (uint i = 0; i < nCells.coeff(0); ++i) {
-                for (uint j = 0; j < nCells.coeff(1); ++j)
+            for (uint i = 0; i < nCells[0]; ++i) {
+                for (uint j = 0; j < nCells[1]; ++j)
                     delete [] cell_list[i][j];
 
                 delete [] cell_list[i];
@@ -68,14 +68,14 @@ public:
             for (unsigned int i = pmin; i < pmax; i++) {
                 getCurrentCell(i,cell);
                 #pragma omp critical
-                cell_list[cell.coeff(0)][cell.coeff(1)][cell.coeff(2)].push_back(i); 
+                cell_list[cell[0]][cell[1]][cell[2]].push_back(i); 
             }
         }
 
         void clearCellList() {
-            for (uint i = 0; i < nCells.coeff(0); ++i)
-                for (uint j = 0; j < nCells.coeff(1); ++j)
-                    for ( uint k = 0; k < nCells.coeff(2); k++)
+            for (uint i = 0; i < nCells[0]; ++i)
+                for (uint j = 0; j < nCells[1]; ++j)
+                    for ( uint k = 0; k < nCells[2]; k++)
                         cell_list[i][j][k].clear();
         }
 
@@ -86,9 +86,9 @@ public:
 
         void printCellList() {
             vector<int> myVec;
-             for (uint i = 0; i < nCells.coeff(0); ++i) {
-                for (uint j = 0; j < nCells.coeff(1); ++j) {
-                     for (uint k = 0; k < nCells.coeff(2); ++k) {
+             for (uint i = 0; i < nCells[0]; ++i) {
+                for (uint j = 0; j < nCells[1]; ++j) {
+                     for (uint k = 0; k < nCells[2]; ++k) {
                         myVec = cell_list[i][j][k];
                         if (myVec.size() > 0) {
                             cout << "Cell [" << i << "][" << j << "][" << k << "] = {";
@@ -113,9 +113,9 @@ public:
                 getNeighborCells(i,lo,hi);
 
                 // Loop over all nearest neighboring cells
-                for ( cx = lo.coeff(0); cx <= hi.coeff(0); cx++) {
-                    for ( cy = lo.coeff(1); cy <= hi.coeff(1); cy++) {
-                        for ( cz = lo.coeff(2); cz <= hi.coeff(2); cz++) {
+                for ( cx = lo[0]; cx <= hi[0]; cx++) {
+                    for ( cy = lo[1]; cy <= hi[1]; cy++) {
+                        for ( cz = lo[2]; cz <= hi[2]; cz++) {
                             for (   it = cell_list[cx][cy][cz].begin(); 
                                     it != cell_list[cx][cy][cz].end(); 
                                     ++it) {
