@@ -57,7 +57,34 @@ public:
             cout << "Done clearing..." << endl;
         }
 
-        int getNumberOfParticles() { return np; }
+        void reset() {
+            clearPartnerList();
+            clearCellList();
+        }
+
+        void initialise() {
+            createCellList();
+        }
+
+        void setSearchRadius(double Rs) {
+            /* The cell-list approach used by this class makes that 
+             * the search radius Rs is _at least_ equal to half a cell 
+             * size. Hence we should create cells which are, in any
+             * direction, dx = 2*Rs, so we should floor the number
+             * of cells that we get when dividing the domain into equal 
+             * parts. */
+
+
+            // Magic here :)
+        }
+
+        vector<int>* getVerletList(int a) {
+
+        }
+
+        vector<struct particle_t>* getVerletList(struct particle_t) {
+            
+        }
 
         // Setters
         // void setParticles(int npart, double **pp) { np = npart; pos = pp; }
