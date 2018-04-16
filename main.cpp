@@ -19,12 +19,6 @@ int main(int argc, char* argv[])
     double *tmp_pos;
     MatrixX3d ppos;
 
-    // // Initialise MPI
-    // int world_size, world_rank;
-    // MPI_Init(&argc, &argv);
-    // MPI_Comm_size(MPI_COMM_WORLD, &world_size);
-    // MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
-
     cout.precision(numeric_limits<double>::max_digits10);
     cout << "Trying to open file " << argv[1] << " ..." << endl;
     ifstream file(argv[1], ios::binary);
@@ -45,11 +39,7 @@ int main(int argc, char* argv[])
         delete [] tmp_pos;
 
         file.close();
-
-        // Print array when only few particles are used
-        if (npart < 100)
-            cout << "Found positions: " << endl << ppos << endl;
-
+        
         // Create neighborlist
         double dsize[3] = {1.0, 1.0, 1.0};
         int ncell[3] = {100,100,100};

@@ -66,7 +66,7 @@ public:
             createCellList();
         }
 
-        void setSearchRadius(double Rs) {
+        void setSearchRadius(double _Rs) {
             /* The cell-list approach used by this class makes that 
              * the search radius Rs is _at least_ equal to half a cell 
              * size. Hence we should create cells which are, in any
@@ -74,20 +74,22 @@ public:
              * of cells that we get when dividing the domain into equal 
              * parts. */
 
+            Array3i dCellsTmp = Array3i::Zero();
+            dCellsTmp += dCells.cast<int> ();
 
-            // Magic here :)
+            dCells = floor(Array3d(domainSize)/_Rs).cast <int> ();
+
+            // Reset when the number of cells has changed
+            if (dCellsTmp.isApprox(dCells)) {
+                reset();
+            }
         }
 
         vector<int>* getVerletList(int a) {
 
         }
 
-        vector<struct particle_t>* getVerletList(struct particle_t) {
-            
-        }
-
-        // Setters
-        // void setParticles(int npart, double **pp) { np = npart; pos = pp; }
+        /* vector<struct particle_t>* getVerletList(struct particle_t) { } */
 
         void createCellList() {
             Array3i cell;
