@@ -36,6 +36,9 @@
         "typeinfo": "cpp",
         "utility": "cpp",
         "*.ipp": "cpp",
-        "slist": "cpp"
+        "slist": "cpp",
+        "dense": "cpp",
+        "core": "cpp",
+        "hash_map": "cpp"
     }
 }
