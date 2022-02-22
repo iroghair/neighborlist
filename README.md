@@ -3,7 +3,8 @@
 ## Intro
 Finding the nearest neighbors in a cloud of particles can be an expensive
 operation. This repository sets up an environment that allows for dedicated 
-testing of various neighborlist-generating algorithms.
+testing of various neighborlist-generating algorithms. Currently, it implements
+a cell-list structure class.
 
 ## Components
 * Python script `generateBinaryPositions.py`: Generates a binary file that 
